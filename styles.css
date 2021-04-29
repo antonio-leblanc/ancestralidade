@@ -1,3 +1,7 @@
+.font-2, .font-3, .font-4{
+  display: none;
+}
+
 #subregion_europa-ocidental { opacity: 0.55 !important; }
 #subregion_europa-ocidental path {fill: #EE4762 !important;}
 #subregion_iberia { opacity: 0.50 !important; }
