@@ -1,0 +1,38 @@
+#subregion_europa-ocidental { opacity: 0.55 !important; }
+#subregion_europa-ocidental path {fill: #EE4762 !important;}
+#subregion_iberia { opacity: 0.50 !important; }
+#subregion_iberia path { fill: #EE4762 !important; }
+#subregion_italia { opacity: 0.40 !important; }
+#subregion_italia path { fill: #EE4762 !important; }
+#subregion_balcas { opacity: 0.36 !important; }
+#subregion_balcas path { fill: #EE4762 !important; }
+#subregion_fenoscandia { opacity: 0.36 !important; }
+#subregion_fenoscandia path { fill: #EE4762 !important; }
+#subregion_basco { opacity: 0.34 !important; }
+#subregion_basco path { fill: #EE4762 !important; }
+#subregion_sardenha { opacity: 0.34 !important; }
+#subregion_sardenha path { fill: #EE4762 !important; }
+#subregion_leste-europeu { opacity: 0.32 !important; }
+#subregion_leste-europeu path { fill: #EE4762 !important; }
+#region_europa.inactive path,
+#region_europa g.inactive path { fill: #555555 !important; }
+#subregion_oeste-da-africa { opacity: 0.38 !important; }
+#subregion_oeste-da-africa path { fill: #6FB529 !important; }
+#subregion_costa-da-mina { opacity: 0.34 !important; }
+#subregion_costa-da-mina path { fill: #6FB529 !important; }
+#subregion_leste-da-africa { opacity: 0.32 !important; }
+#subregion_leste-da-africa path { fill: #6FB529 !important; }
+#region_africa.inactive path,
+#region_africa g.inactive path { fill: #555555 !important; }
+#subregion_magrebe { opacity: 0.34 !important; }
+#subregion_magrebe path { fill: #804F7D !important; }
+#subregion_anatolia { opacity: 0.31 !important; }
+#subregion_anatolia path { fill: #804F7D !important; }
+#region_oriente-medio-e-magrebe.inactive path,
+#region_oriente-medio-e-magrebe g.inactive path { fill: #555555 !important; }
+#subregion_america-andina { opacity: 0.32 !important; }
+#subregion_america-andina path { fill: #FF4D80 !important; }
+#subregion_patagonia { opacity: 0.32 !important; }
+#subregion_patagonia path { fill: #FF4D80 !important; }
+#region_americas.inactive path,
+#region_americas g.inactive path { fill: #555555 !important; }
