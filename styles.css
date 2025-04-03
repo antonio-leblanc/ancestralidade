@@ -88,6 +88,44 @@ main {
 }
 */
 
+/* --- Navigation --- */
+.main-nav {
+  /* Position it within the header */
+  /* Option 1: Center below title if header is flex-column */
+  /* Option 2: Place it somewhere else using flex order or absolute positioning */
+  text-align: center; /* Simple centering */
+  margin: 10px 0; /* Add some space */
+  /* If you want it integrated into the header flex row: */
+  /* flex-grow: 2; /* Allow it to take space */
+  /* text-align: center; */
+}
+
+.main-nav a {
+  margin: 0 15px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #007bff;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background-color: #e9ecef;
+  text-decoration: none;
+}
+
+.main-nav a.active {
+  font-weight: bold;
+  color: #333;
+  background-color: #dee2e6;
+}
+
+/* Adjust header flex properties if needed to accommodate nav */
+/* E.g., maybe make header wrap or change alignment */
+.site-header {
+  /* Consider flex-wrap: wrap; if needed */
+  /* align-items: center; */ /* Adjust as needed */
+}
 
 /* --- Intro Section --- */
 .intro-section {
@@ -426,4 +464,170 @@ main {
   .intro-section {
       padding: 15px; /* Reduce padding */
   }
+}
+
+/* --- Linagem Materna Page Styles --- */
+
+.lineage-intro,
+.haplogroup-section,
+.migration-route-section {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.lineage-intro h2,
+.haplogroup-section h3,
+.migration-route-section h3 {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+/* Haplogroup Section */
+.haplogroup-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.haplogroup-header h3 {
+    margin: 0;
+}
+
+.haplogroup-tag {
+    display: inline-block;
+    background-color: #fd7e14; /* Orange color */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.haplogroup-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.haplogroup-map {
+    flex: 0 0 300px; /* Fixed width for map container */
+    max-width: 100%; /* Ensure it shrinks on small screens */
+    text-align: center;
+}
+
+.haplogroup-map img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.haplogroup-description {
+    flex: 1; /* Take remaining space */
+    min-width: 250px; /* Minimum width before wrapping */
+}
+
+.haplogroup-description p {
+    margin-top: 0;
+    font-size: 0.95em;
+    color: #495057;
+}
+
+
+/* Migration Route Section */
+.migration-route-section h3 {
+     padding-bottom: 10px;
+     border-bottom: 1px solid #eee;
+}
+
+.route-steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid for steps */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.route-step {
+    /* No extra background needed, contained by section */
+    border: 1px solid #e0e0e0; /* Add border to each step box */
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Slight background tint */
+}
+
+.route-step h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.route-step-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+     align-items: flex-start;
+}
+
+.route-step-map {
+    flex: 0 0 200px; /* Smaller fixed width for these maps */
+    max-width: 100%;
+    text-align: center;
+}
+
+.route-step-map img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.route-step-description {
+    flex: 1;
+    min-width: 150px; /* Minimum width */
+}
+
+.route-step-description p {
+    margin-top: 0;
+    font-size: 0.9em;
+    color: #495057;
+}
+
+/* --- Responsive Adjustments for Linagem Materna --- */
+@media (max-width: 768px) {
+    .haplogroup-map {
+        flex-basis: 100%; /* Stack map above text */
+        margin-bottom: 15px;
+    }
+     .route-steps-container {
+         grid-template-columns: 1fr; /* Single column */
+     }
+     .route-step-map {
+         flex-basis: 150px; /* Adjust map size if needed */
+     }
+}
+
+@media (max-width: 576px) {
+     .lineage-intro,
+    .haplogroup-section,
+    .migration-route-section {
+        padding: 15px 20px;
+    }
+     .haplogroup-map {
+         flex-basis: 100%;
+     }
+     .route-step-map {
+         flex-basis: 100%; /* Stack map above text */
+         margin-bottom: 15px;
+     }
+     .route-step-content {
+         flex-direction: column; /* Ensure stacking */
+     }
 }
