@@ -130,31 +130,6 @@ main {
   font-size: 1.1em;
 }
 
-.coupon-box {
-  background-color: #e9ecef; /* Light grey */
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  padding: 15px;
-  text-align: center;
-  font-size: 0.9em;
-  flex: 1 1 30%; /* Allow coupon to take some space */
-  min-width: 200px;
-}
-
-.coupon-box strong {
-  display: block;
-  background-color: #6c757d; /* Darker grey */
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  font-size: 1.1em;
-}
-.coupon-box p {
-  margin: 0;
-  color: #495057;
-}
-
 
 /* --- Map Section --- */
 .map-section {
@@ -167,7 +142,7 @@ main {
 }
 
 .ancestry-map-container {
-  max-width: 900px; /* Limit map width */
+  max-width: 1000px; /* Limit map width */
   margin: 0 auto; /* Center map container */
   background-color: #f0f0f0; /* Light background for map area */
   border: 1px solid #ccc;
