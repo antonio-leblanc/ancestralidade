@@ -46,21 +46,17 @@ main {
   background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow wrapping for nav */
 }
 
 .site-header .logo-placeholder {
   font-weight: bold;
   font-size: 1.5em;
-  /* Add logo image styles here if you have one */
   color: #D94A58; /* Example color */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
-.site-header h1 {
-  margin: 0;
-  font-size: 1.4em;
-  text-align: center;
-  flex-grow: 1; /* Allow title to take space */
-}
+/* Removed H1 styling from header to allow nav */
 
 .user-info {
   display: flex;
@@ -71,42 +67,26 @@ main {
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 0.9em;
+  flex-shrink: 0; /* Prevent shrinking */
 }
-/* If you want initials inside the user-info box */
-/*
-.user-info::before {
-  content: 'AL';
-  display: inline-block;
-  background-color: #adb5bd;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  margin-right: 8px;
-  font-size: 0.8em;
-}
-*/
 
 /* --- Navigation --- */
 .main-nav {
-  /* Position it within the header */
-  /* Option 1: Center below title if header is flex-column */
-  /* Option 2: Place it somewhere else using flex order or absolute positioning */
-  text-align: center; /* Simple centering */
-  margin: 10px 0; /* Add some space */
-  /* If you want it integrated into the header flex row: */
-  /* flex-grow: 2; /* Allow it to take space */
-  /* text-align: center; */
+ flex-grow: 1; /* Allow nav to take space */
+ text-align: center;
+ margin: 5px 15px; /* Adjust margin */
+ min-width: 200px; /* Prevent excessive squish */
 }
 
 .main-nav a {
-  margin: 0 15px;
+  margin: 0 10px; /* Adjust spacing */
   padding: 8px 12px;
   text-decoration: none;
   color: #007bff;
   border-radius: 4px;
   transition: background-color 0.2s ease;
+  display: inline-block; /* Ensure padding works */
+  white-space: nowrap; /* Prevent link text wrapping */
 }
 
 .main-nav a:hover {
@@ -120,12 +100,6 @@ main {
   background-color: #dee2e6;
 }
 
-/* Adjust header flex properties if needed to accommodate nav */
-/* E.g., maybe make header wrap or change alignment */
-.site-header {
-  /* Consider flex-wrap: wrap; if needed */
-  /* align-items: center; */ /* Adjust as needed */
-}
 
 /* --- Intro Section --- */
 .intro-section {
@@ -168,6 +142,31 @@ main {
   font-size: 1.1em;
 }
 
+.coupon-box {
+  background-color: #e9ecef; /* Light grey */
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+  flex: 1 1 30%; /* Allow coupon to take some space */
+  min-width: 200px;
+}
+
+.coupon-box strong {
+  display: block;
+  background-color: #6c757d; /* Darker grey */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+.coupon-box p {
+  margin: 0;
+  color: #495057;
+}
+
 
 /* --- Map Section --- */
 .map-section {
@@ -180,7 +179,7 @@ main {
 }
 
 .ancestry-map-container {
-  max-width: 1000px; /* Limit map width */
+  max-width: 900px; /* Limit map width */
   margin: 0 auto; /* Center map container */
   background-color: #f0f0f0; /* Light background for map area */
   border: 1px solid #ccc;
@@ -298,10 +297,11 @@ main {
 
 .sub-region-item {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */ /* Let bar push things */
   align-items: center;
   margin-bottom: 15px;
   font-size: 0.95em;
+  gap: 5px; /* Space between elements */
 }
 
 .sub-region-item.indented {
@@ -312,7 +312,7 @@ main {
 
 .sub-region-name {
   flex-grow: 1; /* Allow name to take available space */
-  padding-right: 10px; /* Space before percentage/indicator */
+  padding-right: 5px; /* Space before percentage */
 }
 
 .sub-region-percentage,
@@ -322,6 +322,7 @@ main {
   flex-shrink: 0; /* Prevent percentage shrinking */
   min-width: 35px; /* Ensure space for percentage */
   text-align: right;
+  margin-left: auto; /* Push percentage and bar to the right */
 }
 
 .sub-region-percentage-indicator {
@@ -334,18 +335,9 @@ main {
 .sub-region-bar {
   height: 6px;
   border-radius: 3px;
-  margin-left: 10px; /* Space between percentage and bar */
+  flex-shrink: 0; /* Prevent bar shrinking */
   /* width and background-color are set inline */
-  /* Alternatively, wrap percentage and bar in a div */
 }
-
-/* Alternative structure if bars are directly after percentage */
-/*
-.sub-region-item { display: block; }
-.sub-region-bar-container { background-color: #e9ecef; height: 6px; border-radius: 3px; margin-top: 3px; }
-.sub-region-bar { height: 100%; border-radius: 3px; }
-*/
-
 
 .region-descriptions {
   flex: 1; /* Take remaining space */
@@ -357,9 +349,6 @@ main {
   margin-bottom: 0.5em;
   padding-bottom: 5px;
   border-bottom: 1px dotted #ccc; /* Dotted line like PDF */
-}
-.region-descriptions article:first-of-type h4 { /* Less margin if needed */
-  /* margin-top: 0; */
 }
 
 .region-descriptions p {
@@ -377,6 +366,141 @@ main {
   color: #6c757d;
   border-top: 1px solid #e0e0e0;
 }
+
+
+/* --- Linagem Materna / Paterna Page Styles --- */
+
+.lineage-intro,
+.haplogroup-section,
+.migration-route-section {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.lineage-intro h2,
+.haplogroup-section h3,
+.migration-route-section h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* Haplogroup Section */
+.haplogroup-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.haplogroup-header h3 {
+  margin: 0;
+}
+
+.haplogroup-tag {
+  display: inline-block;
+  background-color: #fd7e14; /* Orange color */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.haplogroup-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start; /* Align items at the top */
+}
+
+.haplogroup-map {
+  flex: 0 0 300px; /* Fixed width for map container */
+  max-width: 100%; /* Ensure it shrinks on small screens */
+  text-align: center;
+}
+
+.haplogroup-map img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.haplogroup-description {
+  flex: 1; /* Take remaining space */
+  min-width: 250px; /* Minimum width before wrapping */
+}
+
+.haplogroup-description p {
+  margin-top: 0;
+  font-size: 0.95em;
+  color: #495057;
+}
+
+
+/* Migration Route Section (Only on Maternal page) */
+.migration-route-section h3 {
+   padding-bottom: 10px;
+   border-bottom: 1px solid #eee;
+}
+
+.route-steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid for steps */
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.route-step {
+  border: 1px solid #e0e0e0; /* Add border to each step box */
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Slight background tint */
+}
+
+.route-step h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.route-step-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+   align-items: flex-start;
+}
+
+.route-step-map {
+  flex: 0 0 200px; /* Smaller fixed width for these maps */
+  max-width: 100%;
+  text-align: center;
+}
+
+.route-step-map img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.route-step-description {
+  flex: 1;
+  min-width: 150px; /* Minimum width */
+}
+
+.route-step-description p {
+  margin-top: 0;
+  font-size: 0.9em;
+  color: #495057;
+}
+
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
@@ -399,235 +523,52 @@ main {
       align-items: stretch; /* Make items full width */
   }
 
-  .intro-text {
-      flex-basis: auto; /* Reset basis */
-      min-width: 0;
-  }
-  .coupon-box {
-       flex-basis: auto; /* Reset basis */
-       min-width: 0;
-  }
+  .intro-text { flex-basis: auto; min-width: 0; }
+  .coupon-box { flex-basis: auto; min-width: 0; }
 
   .region-list,
   .region-descriptions {
-      flex-basis: auto; /* Reset basis */
-      flex: 0 0 auto; /* Prevent flex grow/shrink */
-      width: 100%; /* Make columns full width when stacked */
+      flex-basis: auto; flex: 0 0 auto; width: 100%;
   }
-
-  .region-list {
-      margin-bottom: 20px; /* Add space below list when stacked */
-  }
+  .region-list { margin-bottom: 20px; }
 
   .continent-summary-grid {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust minmax for smaller items */
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
   }
 
-   .site-header h1 {
-      font-size: 1.2em;
-  }
-  .user-info {
-      font-size: 0.8em;
-  }
+  .haplogroup-map { flex-basis: 100%; margin-bottom: 15px; }
+  .route-steps-container { grid-template-columns: 1fr; }
+  .route-step-map { flex-basis: 150px; }
 }
 
 @media (max-width: 576px) {
-  body {
-      font-size: 14px; /* Slightly smaller base font */
-  }
-   main {
-      padding: 0 10px;
-  }
-   .site-header {
+  body { font-size: 14px; }
+  main { padding: 0 10px; }
+  .site-header {
       padding: 10px 15px;
-      flex-wrap: wrap; /* Allow header items to wrap */
       justify-content: center; /* Center items when wrapped */
       gap: 10px;
   }
-   .site-header h1 {
-      order: 1; /* Ensure title is below logo */
-      width: 100%; /* Full width title */
-      text-align: center;
+  .main-nav {
+       width: 100%; /* Full width nav */
+       order: 3; /* Place nav below logo/user */
+       margin: 5px 0;
   }
-  .user-info {
-      order: 2;
+   .main-nav a { margin: 0 5px; } /* Reduce nav link spacing */
+
+  .user-info { order: 2; }
+  .logo-placeholder { order: 1; }
+
+
+  .continent-summary-grid { grid-template-columns: 1fr; gap: 15px; }
+
+  .results-continental, .continent-detail, .intro-section,
+  .lineage-intro, .haplogroup-section, .migration-route-section {
+      padding: 15px;
   }
 
-  .continent-summary-grid {
-      grid-template-columns: 1fr; /* Single column */
-      gap: 15px;
-  }
-
-  .results-continental,
-  .continent-detail,
-  .intro-section {
-      padding: 15px; /* Reduce padding */
-  }
-}
-
-/* --- Linagem Materna Page Styles --- */
-
-.lineage-intro,
-.haplogroup-section,
-.migration-route-section {
-    background-color: #fff;
-    padding: 25px 30px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-}
-
-.lineage-intro h2,
-.haplogroup-section h3,
-.migration-route-section h3 {
-    margin-top: 0;
-    margin-bottom: 1em;
-}
-
-/* Haplogroup Section */
-.haplogroup-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.haplogroup-header h3 {
-    margin: 0;
-}
-
-.haplogroup-tag {
-    display: inline-block;
-    background-color: #fd7e14; /* Orange color */
-    color: white;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-.haplogroup-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: flex-start; /* Align items at the top */
-}
-
-.haplogroup-map {
-    flex: 0 0 300px; /* Fixed width for map container */
-    max-width: 100%; /* Ensure it shrinks on small screens */
-    text-align: center;
-}
-
-.haplogroup-map img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    border: 1px solid #eee;
-}
-
-.haplogroup-description {
-    flex: 1; /* Take remaining space */
-    min-width: 250px; /* Minimum width before wrapping */
-}
-
-.haplogroup-description p {
-    margin-top: 0;
-    font-size: 0.95em;
-    color: #495057;
-}
-
-
-/* Migration Route Section */
-.migration-route-section h3 {
-     padding-bottom: 10px;
-     border-bottom: 1px solid #eee;
-}
-
-.route-steps-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive grid for steps */
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.route-step {
-    /* No extra background needed, contained by section */
-    border: 1px solid #e0e0e0; /* Add border to each step box */
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #f8f9fa; /* Slight background tint */
-}
-
-.route-step h4 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    color: #333;
-}
-
-.route-step-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-     align-items: flex-start;
-}
-
-.route-step-map {
-    flex: 0 0 200px; /* Smaller fixed width for these maps */
-    max-width: 100%;
-    text-align: center;
-}
-
-.route-step-map img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    border: 1px solid #eee;
-}
-
-.route-step-description {
-    flex: 1;
-    min-width: 150px; /* Minimum width */
-}
-
-.route-step-description p {
-    margin-top: 0;
-    font-size: 0.9em;
-    color: #495057;
-}
-
-/* --- Responsive Adjustments for Linagem Materna --- */
-@media (max-width: 768px) {
-    .haplogroup-map {
-        flex-basis: 100%; /* Stack map above text */
-        margin-bottom: 15px;
-    }
-     .route-steps-container {
-         grid-template-columns: 1fr; /* Single column */
-     }
-     .route-step-map {
-         flex-basis: 150px; /* Adjust map size if needed */
-     }
-}
-
-@media (max-width: 576px) {
-     .lineage-intro,
-    .haplogroup-section,
-    .migration-route-section {
-        padding: 15px 20px;
-    }
-     .haplogroup-map {
-         flex-basis: 100%;
-     }
-     .route-step-map {
-         flex-basis: 100%; /* Stack map above text */
-         margin-bottom: 15px;
-     }
-     .route-step-content {
-         flex-direction: column; /* Ensure stacking */
-     }
+  .haplogroup-map { flex-basis: 100%; }
+  .route-step-map { flex-basis: 100%; margin-bottom: 15px; }
+  .route-step-content { flex-direction: column; }
 }
