@@ -4,30 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Ancestralidade - Antonio Leblanc</title>
+    <title>Meus Resultados de Ancestralidade - Antonio Leblanc</title>
 </head>
 <body>
 
     <header class="site-header">
-        <!-- Using h1 for main page title, maybe span for logo/name -->
-        <span class="logo-placeholder">genera</span> <!-- Placeholder for logo -->
-        <h1>Resultados de Ancestralidade</h1>
+        <span class="logo-placeholder">genera</span>
+        <nav class="main-nav">
+            <a href="index.html" class="active">Ancestralidade</a>
+            <a href="linhagem-materna.html">Linhagem Materna</a>
+            <a href="linhagem-paterna.html">Linhagem Paterna</a>
+            <!-- Add more links later -->
+        </nav>
         <div class="user-info">AL Antonio Leblanc</div>
-				<nav class="main-nav">
-					<a href="index.html" class="active">Ancestralidade</a>
-					<a href="linhagem-materna.html">Linhagem Materna</a>
-					<a href="linhagem-paterna.html">Linhagem Paterna</a>
-
-					<!-- Add more links later -->
-			</nav>
     </header>
 
     <main>
         <section class="intro-section">
             <div class="intro-text">
-                <span class="user-initials">AL</span> <!-- Style this circle -->
+                <span class="user-initials">AL</span>
                 <p>Antonio, seu DNA indica que 78% da sua ancestralidade é proveniente da Europa.</p>
             </div>
+
         </section>
 
         <section class="map-section">
@@ -43,10 +41,9 @@
             <p>
                 Esta página apresenta um panorama inicial de sua herança ancestral, revelando como suas raízes se espalham pelos diferentes continentes do
                 mundo, com porcentagens que indicam a proporção de sua ancestralidade vinculada a cada região. Este mapa é apenas o começo de uma viagem
-                profunda pela história de sua família, servindo como um guia visual para entender de onde você vem. À medida que avança para as páginas
-                seguintes, serão introduzidas informações mais detalhadas e específicas sobre cada área geográfica. Você explorará a história, os movimentos e os
-                eventos que moldaram seus antepassados e, por fim, você mesmo. Prepare-se para desvendar as camadas de sua identidade genética e descobrir
-                como a história de suas origens se entrelaça para formar quem você é.
+                profunda pela história de sua família, servindo como um guia visual para entender de onde você vem.
+                <!-- Summarized the rest -->
+                 Prepare-se para desvendar as camadas de sua identidade genética e descobrir como a história de suas origens se entrelaça para formar quem você é.
             </p>
             <div class="continent-summary-grid">
                 <div class="continent-item">
@@ -72,7 +69,7 @@
                 </div>
                 <div class="continent-item">
                     <span class="continent-name">Américas</span>
-                    <span class="continent-percentage">4%</span> <!-- Note: PDF shows 4% but breakdown adds to <4% -->
+                    <span class="continent-percentage">4%</span>
                     <div class="percentage-bar-container">
                         <div class="percentage-bar" style="width: 4%; background-color: #E8854E;"></div>
                     </div>
@@ -91,104 +88,65 @@
                 </div>
                 <div class="region-breakdown">
                     <div class="region-list">
+                        <!-- Sub-region items as before -->
+                         <div class="sub-region-item">
+                            <span class="sub-region-name">Europa Ocidental</span><span class="sub-region-percentage">30%</span>
+                            <div class="sub-region-bar" style="width: 30%; background-color: #D94A58;"></div>
+                        </div>
+                         <div class="sub-region-item indented"><span class="sub-region-name">Alemanha, França e Países Baixos</span><span class="sub-region-percentage-indicator">[Indicator]</span></div>
+                         <div class="sub-region-item indented"><span class="sub-region-name">Ilhas Britânicas</span><span class="sub-region-percentage-indicator">[Indicator]</span></div>
                         <div class="sub-region-item">
-                            <span class="sub-region-name">Europa Ocidental</span>
-                            <span class="sub-region-percentage">30%</span>
-                            <div class="sub-region-bar" style="width: 30%; background-color: #D94A58;"></div> <!-- Example bar -->
-                        </div>
-                        <div class="sub-region-item indented"> <!-- Indented like PDF -->
-                           <span class="sub-region-name">Alemanha, França e Países Baixos</span>
-                           <span class="sub-region-percentage-indicator">[Indicator]</span> <!-- Placeholder for bars -->
-                        </div>
-                         <div class="sub-region-item indented">
-                           <span class="sub-region-name">Ilhas Britânicas</span>
-                           <span class="sub-region-percentage-indicator">[Indicator]</span>
-                        </div>
-                        <div class="sub-region-item">
-                            <span class="sub-region-name">Ibéria</span>
-                            <span class="sub-region-percentage">27%</span>
+                            <span class="sub-region-name">Ibéria</span><span class="sub-region-percentage">27%</span>
                             <div class="sub-region-bar" style="width: 27%; background-color: #D94A58;"></div>
                         </div>
                         <div class="sub-region-item">
-                            <span class="sub-region-name">Bálcãs</span>
-                            <span class="sub-region-percentage">7%</span>
+                            <span class="sub-region-name">Bálcãs</span><span class="sub-region-percentage">7%</span>
                             <div class="sub-region-bar" style="width: 7%; background-color: #D94A58;"></div>
                         </div>
-                         <div class="sub-region-item indented">
-                           <span class="sub-region-name">Bulgária e Macedônia do Norte</span>
-                           <span class="sub-region-percentage-indicator">[Indicator]</span>
-                        </div>
-                         <div class="sub-region-item indented">
-                           <span class="sub-region-name">Croácia e Bósnia-Herzegovina</span>
-                           <span class="sub-region-percentage-indicator">[Indicator]</span>
-                        </div>
-                         <div class="sub-region-item indented">
-                           <span class="sub-region-name">Sérvia e Montenegro</span>
-                           <span class="sub-region-percentage-indicator">[Indicator]</span>
-                        </div>
-                         <div class="sub-region-item indented">
-                           <span class="sub-region-name">Romênia e Moldávia</span>
-                           <span class="sub-region-percentage-indicator">[Indicator]</span>
-                        </div>
-                         <div class="sub-region-item indented">
-                           <span class="sub-region-name">Grécia</span>
-                           <span class="sub-region-percentage-indicator">[Indicator]</span>
-                        </div>
+                         <div class="sub-region-item indented"><span class="sub-region-name">Bulgária e Macedônia do Norte</span><span class="sub-region-percentage-indicator">[Indicator]</span></div>
+                         <div class="sub-region-item indented"><span class="sub-region-name">Croácia e Bósnia-Herzegovina</span><span class="sub-region-percentage-indicator">[Indicator]</span></div>
+                         <div class="sub-region-item indented"><span class="sub-region-name">Sérvia e Montenegro</span><span class="sub-region-percentage-indicator">[Indicator]</span></div>
+                         <div class="sub-region-item indented"><span class="sub-region-name">Romênia e Moldávia</span><span class="sub-region-percentage-indicator">[Indicator]</span></div>
+                         <div class="sub-region-item indented"><span class="sub-region-name">Grécia</span><span class="sub-region-percentage-indicator">[Indicator]</span></div>
                         <div class="sub-region-item">
-                            <span class="sub-region-name">Itália</span>
-                            <span class="sub-region-percentage">4%</span>
+                            <span class="sub-region-name">Itália</span><span class="sub-region-percentage">4%</span>
                            <div class="sub-region-bar" style="width: 4%; background-color: #D94A58;"></div>
                         </div>
                         <div class="sub-region-item">
-                            <span class="sub-region-name">Basco</span>
-                            <span class="sub-region-percentage">4%</span>
+                            <span class="sub-region-name">Basco</span><span class="sub-region-percentage">4%</span>
                             <div class="sub-region-bar" style="width: 4%; background-color: #D94A58;"></div>
                         </div>
                          <div class="sub-region-item">
-                            <span class="sub-region-name">Fenoscândia</span>
-                            <span class="sub-region-percentage">4%</span>
+                            <span class="sub-region-name">Fenoscândia</span><span class="sub-region-percentage">4%</span>
                             <div class="sub-region-bar" style="width: 4%; background-color: #D94A58;"></div>
                         </div>
                          <div class="sub-region-item">
-                            <span class="sub-region-name">Sardenha</span>
-                            <span class="sub-region-percentage">< 3%</span> <!-- Less than 3% -->
-                             <div class="sub-region-bar" style="width: 2.5%; background-color: #D94A58;"></div> <!-- Approximate width -->
+                            <span class="sub-region-name">Sardenha</span><span class="sub-region-percentage">< 3%</span>
+                             <div class="sub-region-bar" style="width: 2.5%; background-color: #D94A58;"></div>
                         </div>
                     </div>
                     <div class="region-descriptions">
+                        <!-- *** SUMMARIZED DESCRIPTIONS *** -->
                         <h4>Europa Ocidental</h4>
-                        <p>A região ocidental da Europa abrange as atuais França, Alemanha, Áustria, Suíça, Bélgica, Holanda, Irlanda, Reino Unido, Liechtenstein e Luxemburgo, e há vestígios de que seres humanos ocupam a região desde 35 mil anos atrás. As ilhas britânicas já fizeram parte do Império Viking, enquanto o território continental foi por muito tempo habitado por tribos celtas e germânicas. Após a queda do Império Romano, os reinos oriundos dessas tribos passaram a ser o poder dominante na região, eventualmente originando os Estados que conhecemos atualmente. O Império Britânico, com início no século XVI, chegou a dominar e colonizar países em todos os continentes, sendo considerado o maior império da história e tendo chegado a ocupar 26% da área terrestre global em seu auge, em 1920.</p>
-                        <p>O deslocamento de europeus ocidentais não ibéricos para o Brasil teve início com as invasões empreendidas por França e Holanda nos séculos XVI e XVII à costa brasileira. No início do século XIX, começam a chegar ingleses, que se instalaram principalmente no Rio de Janeiro e em São Paulo, onde fundaram a São Paulo Railway, primeira ferrovia do estado. Após a independência, a imigração de alemães foi incentivada pelo governo brasileiro para ocupar regiões ainda despovoadas do território e "embranquecer" a população. Houve também grande afluxo de alemães devido às Guerras Mundiais.</p>
-
-                        <h4>Europa Ocidental e Norte da Itália</h4>
-                        <p>A proximidade geográfica das populações da Europa Ocidental e do Norte da Itália, bem como o contexto histórico dessas regiões, contribuiu para que esses grupos se tornassem muito parecidos geneticamente. Por essa razão, é possível que uma estimativa de ancestralidade proveniente da Europa Ocidental contenha também ancestralidade do Norte da Itália.</p>
+                        <p>Abrange França, Alemanha, Reino Unido, etc. Raízes em tribos Celtas/Germânicas, influências Romanas e Vikings. Inclui migrações não-ibéricas (Francesa, Holandesa, Inglesa, Alemã) para o Brasil. A proximidade com Norte da Itália pode misturar traços genéticos.</p>
 
                         <h4>Ibéria</h4>
-                        <p>Os primeiros achados arqueológicos na Ibéria (região relativa a Portugal e Espanha) datam do período paleolítico. De lá para cá, a região sofreu influências genéticas de regiões como Itália, Grécia, estepe pôntico-cáspia (região ao redor do extremo sudoeste da Rússia), centro e norte da Europa, norte da África, e de povos como os judeus exilados e os muçulmanos, durante o domínio destes últimos sobre a península. Ou seja, a população ibérica representa um grande e diverso mosaico genético.</p>
-                        <p>Durante os primeiros séculos da colonização, a entrada de portugueses no Brasil foi restrita, limitando-se a poucas centenas por ano. Foi apenas após a independência que esses números cresceram, chegando a alcançar 76 mil imigrantes portugueses anuais às vésperas da Primeira Guerra Mundial. A figura espanhola se fez bem menos presente, porém ainda com impacto, principalmente na região sul do país (durante a colônia) e sudeste (após a independência). Entre 1800 e 1980, calcula-se que quase 1,8 milhão de portugueses entraram no Brasil, e que o número de espanhóis seja aproximadamente um terço disso.</p>
+                        <p>Região de Portugal e Espanha com origens antigas e influências genéticas diversas (Mediterrâneo, Norte da África, Judeus, Muçulmanos). Principal fonte da colonização do Brasil, com grande imigração Portuguesa posterior.</p>
 
                         <h4>Bálcãs</h4>
-                        <p>A península balcânica, ou Bálcãs, inclui os países Albânia, Bósnia e Herzegovina, Bulgária, Croácia, Eslovênia, Grécia, Kosovo, Macedônia do Norte, Montenegro, Romênia, Sérvia e o extremo oeste da Turquia. A região é um dos prováveis pontos de entrada na Europa das primeiras populações humanas que saíram da África, e plano de fundo de diversas outras migrações ou rotas comerciais subsequentes. Além disso, a península foi centro do Império Bizantino, e o contato com as terras dominados por este império ficou marcado no DNA dos habitantes locais.</p>
-                        <p>A região também é definida pela significativa presença de ciganos Rom, um grupo étnico nômade de origem indiana. A presença de ciganos dos Bálcãs no Brasil concentra-se no Sudeste e litoral do Nordeste, e se deu principalmente a partir do século XIX, embora já existissem aqui ciganos Calon provenientes da península ibérica. No período entreguerras, marcado pela Grande Depressão, diversos emigrantes da antiga Iugoslávia (atualmente correspondente à maioria dos países balcânicos) também buscaram o Brasil como forma de fugir da crise econômica.</p>
+                        <p>Sudeste Europeu, importante rota de migração antiga e centro do Império Bizantino. Presença do povo Cigano Rom. Alguma emigração para o Brasil, especialmente entre guerras.</p>
 
                         <h4>Itália</h4>
-                        <p>A geografia da Itália, que divide o Mediterrâneo em dois, faz dela um importante ponto de cruzamento entre povos e culturas. Seres humanos modernos já habitavam a península em 35.000 AEC (Antes da Era Comum) e, da mistura destes com indoeuropeus, em cerca de 1.000 AEC, desenvolveram-se comunidades no norte da Itália. Pouco depois, ao sul, os gregos fundaram cidades como Nápoles e Siracusa. Além disso, como centro inicial do Império Romano, foi inevitável o contato da Itália com todo o restante das áreas dominadas, resultando no influxo genético destes domínios para o território italiano.</p>
-                        <p>Entre 1870 e 1920, no período conhecido como "grande imigração", cerca de 1,4 milhão de italianos entraram no Brasil, motivados, de maneira geral, pelo desgaste político, social e econômico causado pelas recentes lutas de unificação da Itália. Devido às semelhanças entre língua, religião e costumes, além da cor da pele, o italiano foi considerado como "imigrante ideal" pelas autoridades públicas e empresários da época, sendo mais "facilmente assimilável" pela sociedade do que os alemães ou japoneses, e contribuindo para a política de branqueamento populacional em curso na época.</p>
-
-                        <h4>Norte da Itália e Europa Ocidental</h4> <!-- Note: This repeats info from above, included as per PDF -->
-                        <p>A proximidade geográfica das populações do Norte da Itália e da Europa Ocidental, bem como o contexto histórico dessas regiões, contribuiu para que esses grupos se tornassem muito parecidos geneticamente. Por essa razão, é possível que uma estimativa de ancestralidade proveniente do Norte da Itália contenha também ancestralidade da Europa Ocidental.</p>
+                        <p>Centro do Império Romano e ponto de encontro de culturas. Grande imigração para o Brasil (1870-1920) devido a dificuldades na Itália, vistos como "imigrantes ideais".</p>
 
                         <h4>Basco</h4>
-                        <p>O povo basco se encontra fragmentado entre dois países, residindo no extremo norte da Espanha e sudoeste da França. Os bascos descendem de uma população ibérica que permaneceu relativamente isolada desde a pré-história, não sendo afetada geneticamente pelos movimentos migratórios que ocorreram no restante da região. Não se notam nos bascos, portanto, influências do norte da África ou do Cáucaso, presentes nas populações vizinhas.</p>
-                        <p>Os dados sobre emigração basca para o Brasil são escassos pois, de maneira geral, os demais países da América Latina (principalmente Argentina, Chile, Venezuela, México e Uruguai) se mostravam melhores destinos. Mesmo assim, as regiões fronteiriças entre o Brasil e alguns destes países podem ter aberto espaço para a entrada no território brasileiro: é o caso do ex-presidente do Brasil Emílio Garrastazu Médici, nascido no Rio Grande do Sul, mas filho de uma uruguaia de origem basca.</p>
+                        <p>Povo do Norte da Espanha/Sudoeste da França, geneticamente distinto devido ao isolamento histórico. Pouca emigração direta para o Brasil.</p>
 
                          <h4>Fenoscândia</h4>
-                         <p>A Fenoscândia é uma região do norte da Europa que abrange Suécia, Noruega, Finlândia e uma parte do noroeste da Rússia. Existem registros humanos na região datados de 7.000 AEC (Antes da Era Comum), de um povo chamado Maglemosiano. Além desse, os Sami são um dos povos autóctones mais antigos da Fenoscândia e vivem em comunidades na Suécia e Noruega até os dias atuais. A exploração e navegação dos Vikings, que se instalaram na região, facilitou o contato desta com outras partes da Europa, África e Ásia.</p>
-                         <p>Muitos fenoscândios imigraram para o Brasil em meados do Século XIX, em busca de uma nova vida e oportunidades econômicas após um período de guerras, e se estabeleceram principalmente na região Sul e em São Paulo, sendo usualmente chamados de escandinavo-brasileiros. Os noruegueses, por exemplo, fizeram parte da fundação e desenvolvimento da colônia que deu origem à atual Joinville, em Santa Catarina.</p>
+                         <p>Região da Escandinávia, Finlândia e Noroeste da Rússia, com povos antigos como os Sami e histórico Viking. Imigração para o Sul/Sudeste do Brasil no século XIX.</p>
 
                         <h4>Sardenha</h4>
-                        <p>A Sardenha é a ilha mais a oeste do território italiano, tendo sido efetivamente colonizada no período Neolítico, por volta de 5.000 AEC (Antes da Era Comum). O isolamento geográfico da ilha a manteve imune à maioria dos processos migratórios que afetaram o restante da Europa, de modo que os sardos dos dias atuais representam uma "fotografia" conservada de como era a estrutura genética desses povos pré-históricos.</p>
-                        <p>Entre 1870 e 1920, no período conhecido como "grande imigração", cerca de 1,4 milhão de italianos entraram no Brasil, motivados, de maneira geral, pelo desgaste político, social e econômico causado pelas recentes lutas de unificação da Itália. Entretanto, em comparação a estes números, a Sardenha foi a região de menor contribuição migratória: apenas cerca de 6 mil sardos emigraram para o Brasil entre 1876 e 1920. Muito antes disso, porém, em 1836, a primeira colônia de italianos no Brasil (Colônia Nova Itália, hoje São João Batista, SC) foi fundada majoritariamente por algumas dezenas de sardos.</p>
+                        <p>Ilha italiana isolada, preservando estrutura genética antiga. Migração muito limitada para o Brasil, embora presentes na fundação da primeira colônia Italiana.</p>
                     </div>
                 </div>
             </article>
@@ -201,34 +159,20 @@
                 </div>
                  <div class="region-breakdown">
                     <div class="region-list">
-                         <div class="sub-region-item">
-                            <span class="sub-region-name">Oeste da África</span>
-                            <span class="sub-region-percentage">6%</span>
-                             <div class="sub-region-bar" style="width: 6%; background-color: #7DBA5D;"></div>
-                        </div>
-                        <div class="sub-region-item">
-                            <span class="sub-region-name">Leste da África</span>
-                            <span class="sub-region-percentage">4%</span>
-                            <div class="sub-region-bar" style="width: 4%; background-color: #7DBA5D;"></div>
-                        </div>
-                        <div class="sub-region-item">
-                            <span class="sub-region-name">Costa da Mina</span>
-                            <span class="sub-region-percentage">4%</span>
-                            <div class="sub-region-bar" style="width: 4%; background-color: #7DBA5D;"></div>
-                        </div>
+                         <div class="sub-region-item"><span class="sub-region-name">Oeste da África</span><span class="sub-region-percentage">6%</span><div class="sub-region-bar" style="width: 6%; background-color: #7DBA5D;"></div></div>
+                        <div class="sub-region-item"><span class="sub-region-name">Leste da África</span><span class="sub-region-percentage">4%</span><div class="sub-region-bar" style="width: 4%; background-color: #7DBA5D;"></div></div>
+                        <div class="sub-region-item"><span class="sub-region-name">Costa da Mina</span><span class="sub-region-percentage">4%</span><div class="sub-region-bar" style="width: 4%; background-color: #7DBA5D;"></div></div>
                     </div>
                     <div class="region-descriptions">
+                        <!-- *** SUMMARIZED DESCRIPTIONS *** -->
                         <h4>Oeste da África</h4>
-                        <p>O ocidente africano abrange os atuais países Camarões, Gabão, República do Congo, Angola, Guiné Equatorial e trechos da Namíbia, África do Sul, República Centro Africana e República Democrática do Congo, bem como o arquipélago São Tomé e Príncipe. A região tem sido por muito tempo o lar dos povos Bantu (como os Bacongo, os Luba e os Lunda), cuja origem remonta a cerca de 2 mil anos AEC (Antes da Era Comum) na região da Bacia do Rio Congo. A Expansão Bantu, durante o primeiro milênio AEC, espalhou-os por quase todo o centro-sul africano. Na Idade Média, diversos Estados Bantu mantiveram o predomínio político na região, como o Reino do Kongo e o Reino Ndongo, cujas fronteiras se situavam onde hoje está localizada a Angola.</p>
-                        <p>Com o início do tráfico atlântico de pessoas, milhões de indivíduos Bantu do oeste africano foram levados e vendidos nas colônias na América para o trabalho escravo nas fazendas. Estima-se que, entre os anos de 1525 e 1851, mais de cinco milhões de africanos escravizados, em sua maioria provenientes da África Ocidental, tenham desembarcado no Brasil. Seu principal destino eram as fazendas no sudeste brasileiro, e sua presença deixou importantes marcas em nossa cultura.</p>
+                        <p>Lar dos povos Bantu, origem da Bacia do Congo. Principal fonte (mais de 5 milhões) de Africanos escravizados trazidos para o Brasil (principalmente Sudeste), deixando forte marca cultural.</p>
 
                         <h4>Leste da África</h4>
-                        <p>A região da África Oriental abrange Tanzânia, Quênia, Malawi, Moçambique, Zimbábue, Zâmbia, Suazilândia e parte da África do Sul. Acredita-se que os povos desta região litorânea descendam dos Bantu que migraram da Nigéria em direção ao Sudão, em seguida continuando sentido sul. O litoral é de fácil acesso marítimo, o que permitiu o contato com comerciantes de outras civilizações, principalmente da Arábia e da Pérsia. Esse contato frequente está refletido no material genético dos povos da região, que apresenta semelhanças com o de habitantes do Oriente Médio.</p>
-                        <p>Após a repreensão da Inglaterra contra o tráfico negreiro em 1815, os comerciantes de pessoas escravizadas passaram a utilizar novas rotas e a buscar alternativas para burlar a proibição. Assim, o território de Moçambique se tornou um dos novos alvos do tráfico, de onde mais de 300 mil habitantes foram retirados e enviados principalmente à região Sudeste do Brasil.</p>
+                        <p>Região costeira (Tanzânia à África do Sul) com raízes Bantu e influências do comércio Árabe/Persa. Tornou-se alvo do tráfico negreiro para o Sudeste do Brasil após 1815.</p>
 
                         <h4>Costa da Mina</h4>
-                        <p>O agrupamento denominado como Costa da Mina engloba os países africanos Nigéria, Gana, Togo e Benim, e recebe esse nome devido ao forte de São Jorge da Mina, erguido na região no final do século XV. Desde 10.000 AEC (Antes da Era Comum), o local já era habitado por povos que apresentavam traços físicos semelhantes aos dos residentes atuais da região. Da borda entre Nigéria e Camarões, o povo Bantu se expandiu para leste e para sul, alcançando até Moçambique.</p>
-                        <p>A Costa da Mina foi uma das principais regiões de origem de africanos escravizados que foram trazidos para o Brasil entre o século XVIII e início do XIX, tendo como destino preferencial a Bahia. Somente nesse período, mesmo após a proibição inglesa do tráfico, quase 1 milhão de pessoas foram embarcadas por essa rota, sendo que aproximadamente 10% morria no trajeto. Em território brasileiro, muitas dessas pessoas compuseram o seu sobrenome como sendo "Mina da Costa", ou apenas "Mina", passando-o a seus descendentes. Os cativos trazidos pertenciam a etnias distintas: Iorubás, Jejes, Hauçás e Bornus, dentre outras.</p>
+                        <p>Região costeira (Nigéria, Gana, etc.), importante origem de Africanos escravizados para a Bahia (séculos XVIII-XIX), incluindo Iorubás, Jejes, Hauçás. O termo "Mina" é comum em sobrenomes.</p>
                     </div>
                 </div>
             </article>
@@ -241,17 +185,12 @@
                 </div>
                  <div class="region-breakdown">
                     <div class="region-list">
-                         <div class="sub-region-item">
-                            <span class="sub-region-name">Magrebe</span>
-                            <span class="sub-region-percentage">4%</span>
-                             <div class="sub-region-bar" style="width: 4%; background-color: #8C4F8F;"></div>
-                        </div>
-                         <!-- No other sub-regions listed in PDF -->
+                         <div class="sub-region-item"><span class="sub-region-name">Magrebe</span><span class="sub-region-percentage">4%</span><div class="sub-region-bar" style="width: 4%; background-color: #8C4F8F;"></div></div>
                     </div>
                     <div class="region-descriptions">
+                         <!-- *** SUMMARIZED DESCRIPTION *** -->
                         <h4>Magrebe</h4>
-                        <p>O Magrebe, no noroeste da África, é uma região que faz parte do mundo árabe, incluindo os territórios do Marrocos, Tunísia, Argélia, parte de Mali, Líbia e Mauritânia, e o território disputado do Saara Ocidental. Existem registros de humanos na região desde 10.000 AEC (Antes da Era Comum). Durante sua história, o deserto do Saara funcionou como uma barreira física que impediu o contato com os territórios da África Subsaariana. Assim, o maior contato da região foi com o Oriente Médio e a Europa, passando por invasões dos Fenícios em 1.000 AEC, expansão Islâmica no ano de 647 e colonização por França, Itália e Espanha, no século XIX.</p>
-                        <p>Durante a expansão islâmica no século VII, houve uma massiva emigração de cristãos do Magrebe para a Itália, a fim de preservar suas crenças. É possível que boa parte dos descendentes destes imigrantes tenham chegado a terras brasileiras devido à "grande imigração" italiana para o Brasil entre 1870 e 1920. França, Bélgica e Países Baixos também possuem uma numerosa população de descendentes do Magrebe.</p>
+                        <p>Noroeste da África (Marrocos, Argélia, etc.), influenciado pelo Oriente Médio e Europa, mas separado da África Subsaariana pelo Saara. Descendentes podem ter chegado ao Brasil via migração italiana.</p>
                     </div>
                 </div>
             </article>
@@ -264,25 +203,16 @@
                 </div>
                  <div class="region-breakdown">
                     <div class="region-list">
-                         <div class="sub-region-item">
-                            <span class="sub-region-name">América Andina</span>
-                            <span class="sub-region-percentage">3%</span>
-                             <div class="sub-region-bar" style="width: 3%; background-color: #E8854E;"></div>
-                        </div>
-                        <div class="sub-region-item">
-                            <span class="sub-region-name">Patagônia</span>
-                            <span class="sub-region-percentage">< 2%</span>
-                             <div class="sub-region-bar" style="width: 1.5%; background-color: #E8854E;"></div> <!-- Approximate -->
-                        </div>
+                         <div class="sub-region-item"><span class="sub-region-name">América Andina</span><span class="sub-region-percentage">3%</span><div class="sub-region-bar" style="width: 3%; background-color: #E8854E;"></div></div>
+                        <div class="sub-region-item"><span class="sub-region-name">Patagônia</span><span class="sub-region-percentage">< 2%</span><div class="sub-region-bar" style="width: 1.5%; background-color: #E8854E;"></div></div>
                     </div>
                     <div class="region-descriptions">
+                         <!-- *** SUMMARIZED DESCRIPTIONS *** -->
                         <h4>América Andina</h4>
-                        <p>A América Andina é constituída pelos países que se encontram na área da cordilheira dos Andes, sendo eles Bolívia, Peru, Equador, Colômbia e Chile. As primeiras populações chegaram na região há cerca de 17 mil anos, mas a principal sociedade a se desenvolver foi o império Inca, que teve seu auge no século XV. A partir do século XVI, houve colonização por parte dos espanhóis, perdurando até meados do século XIX, quando ocorreram as ondas de movimentos de independência da América Latina.</p>
-                         <p>A proximidade geográfica, aliada à instabilidade política e econômica dos locais de origem, resultou em uma extensa migração de povos da América Andina para o Brasil, especialmente a partir da década de 60, dado o cenário político autoritário de alguns países da região. Atualmente, o número de descendentes de populações andinas residindo em terras brasileiras é superior a 350.000, sendo a maior fração referente a bolivianos. Tais populações se encontram principalmente concentradas nas áreas de divisa, como em Mato Grosso, ou em grandes centros urbanos, como São Paulo e Rio de Janeiro.</p>
+                        <p>Região dos Andes (Bolívia, Peru, etc.), lar do Império Inca. Colonização Espanhola. Migração significativa para o Brasil desde os anos 60, especialmente Bolivianos.</p>
 
                         <h4>Patagônia</h4>
-                        <p>A região da Patagônia se refere ao extremo sul da América Latina, englobando partes da Argentina e do Chile. A presença de populações aborígenes na região data de mais de 10 mil anos atrás, mas mesmo com esta distância temporal, ainda notam-se profundas semelhanças genéticas entre os atuais patagões e os demais nativos da América do Sul. Além disso, alguns estudos relacionam características genéticas entre grupos nativos específicos da Oceania e da América do Sul, o que indicaria algum contato - ou mesmo descendência - durante o povoamento desta última.</p>
-                        <p>Algumas das tribos nativas da Patagônia foram levadas à quase extinção em decorrência da chegada dos europeus, porém outras permaneceram relativamente soberanas no seu território até meados do século XIX, quando os Estados da Argentina e Chile dominaram politicamente a área. Estes povos remanescentes, que apesar do domínio mantiveram certa autonomia, estavam abertos ao comércio, permitindo intercâmbio genético com os argentinos e chilenos da região.</p>
+                        <p>Extremo sul da América do Sul (Argentina/Chile) com povos nativos antigos. Populações diminuíram após contato europeu, mas alguns grupos persistem.</p>
                     </div>
                 </div>
             </article>
